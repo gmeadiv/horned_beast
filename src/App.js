@@ -1,7 +1,10 @@
 // import logo from './logo.svg';
 import './App.css';
-import {Component} from 'react';
+// import {Component} from 'react';
 import Header from './Header.js';
+import Main from './Main.js';
+import Footer from './Footer.js';
+
 
 function App() {
   return (
@@ -24,33 +27,10 @@ function App() {
     // </div>
     <div>
     <Header />
-    <Main message={'Hi'} />
+    <Main />
     <Footer />
     </div>
   );
-}
-
-class Main extends Component {
-  render() {
-    return (
-      <>
-        <h1>My message is {this.props.message}</h1>
-        <HornedBeast title={'rhino'} />
-      </>
-    )
-  }
-}
-
-class HornedBeast extends Component {
-  render() {
-    return <h1>I'm a horned beast with title of {this.props.title}</h1>
-  }
-}
-
-class Footer extends Component {
-  render() {
-    return <h1>George Mead</h1>
-  }
 }
 
 export default App;
