@@ -1,8 +1,18 @@
 import {Component} from 'react';
+import Navbar from 'react-bootstrap/Navbar';
+import Container from 'react-bootstrap/Container';
 
 class Footer extends Component {
   render() {
-    return <h3>This page is by George Mead</h3>
+    return (
+      <Navbar bg="dark" variant="dark">
+        <Container>
+          <Navbar.Brand>
+            {this.props.text}
+          </Navbar.Brand>
+        </Container>
+      </Navbar>
+    );
   }
 }
 

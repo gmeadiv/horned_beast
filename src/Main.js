@@ -1,27 +1,71 @@
 import {Component} from 'react';
-import itchy from './images/itchy.png';
-import scratchy from './images/Scratchy.png';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import Row from 'react-bootstrap/Row';
 
 class Main extends Component {
   render() {
+    const bios = this.props.beastBios;
+
     return (
-      <>
-        <HornedBeast title={'Itchy'} imgURL={itchy} description={'A fierce beast whose strength and spirit makes up for its size.'} />
-        <HornedBeast title={'Scratchy'} imgURL={scratchy} description={'Not the brightest, but is the biggest.'} />
-      </>
-    )
+      <Container>
+        <h2>{this.props.message}</h2>
+        <Row>
+          <Col><HornedBeastImg bio={bios[0]} /></Col>
+          <Col><HornedBeastImg bio={bios[1]} /></Col>
+          <Col><HornedBeastImg bio={bios[2]} /></Col>
+          <Col><HornedBeastImg bio={bios[3]} /></Col>
+          <Col><HornedBeastImg bio={bios[4]} /></Col>
+        </Row>
+        <Row>
+          <Col><HornedBeastImg bio={bios[5]} /></Col>
+          <Col><HornedBeastImg bio={bios[6]} /></Col>
+          <Col><HornedBeastImg bio={bios[7]} /></Col>
+          <Col><HornedBeastImg bio={bios[8]} /></Col>
+          <Col><HornedBeastImg bio={bios[9]} /></Col>
+        </Row>
+        <Row>
+          <Col><HornedBeastImg bio={bios[10]} /></Col>
+          <Col><HornedBeastImg bio={bios[11]} /></Col>
+          <Col><HornedBeastImg bio={bios[12]} /></Col>
+          <Col><HornedBeastImg bio={bios[13]} /></Col>
+          <Col><HornedBeastImg bio={bios[14]} /></Col>
+        </Row>
+        <Row>
+          <Col><HornedBeastImg bio={bios[15]} /></Col>
+          <Col><HornedBeastImg bio={bios[16]} /></Col>
+          <Col><HornedBeastImg bio={bios[17]} /></Col>
+          <Col><HornedBeastImg bio={bios[18]} /></Col>
+          <Col><HornedBeastImg bio={bios[19]} /></Col>
+        </Row>
+      </Container>
+    );
   }
 }
 
-class HornedBeast extends Component {
+class HornedBeastImg extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      count: 0,
+    }
+  }
+
+  handleClick = (event) => {
+    let countUp = this.state.count + 1;
+    this.setState({
+      count: countUp,
+    });
+  }
+
   render() {
     return (
-    <>
-      <h2>This horned beast is known as {this.props.title}</h2>
-      <img src={this.props.imgURL} alt='hornedBeast_img' title={this.props.title} />
-      <p>{this.props.description}</p>
-    </>
-    )
+      <>
+        <Image onClick={this.handleClick} src={this.props.bio.image_url} alt='an horned beast' rounded fluid />
+        <h3>{'❤️' + this.state.count}</h3>
+      </>
+    );
   }
 }
 
