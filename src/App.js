@@ -31,7 +31,7 @@ class App extends Component {
       <Container>
         <Header title="The Horned Beasts of Springfield" />
          <Main message="Big and strong or small and quick? Elegant and graceful or brash and brave?" beastBios={beastBios} showBeast={this.showSelectedBeast} changeBeast={this.changeBeast} />
-         <HornedBeastModal selectedBeast={this.state.selectedBeast} show={this.state.selected} hide={this.hideSelectedBeast} beastBios={beastBios} image_url={this.props.image_url} title={this.props.title} description={this.props.description} />
+         <HornedBeastModal selectedBeast={this.state.selectedBeast} show={this.state.selected} hide={this.hideSelectedBeast} image_url={this.props.image_url} title={this.props.title} description={this.props.description} />
          <Footer text="There are no wrong answers!" />
       </Container>
     );
