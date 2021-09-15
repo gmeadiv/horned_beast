@@ -7,16 +7,6 @@ import Container from 'react-bootstrap/Container';
 import HornedBeastModal from './components/HornedBeastModal';
 import {Component} from 'react';
 
-// function App() {
-//   return (
-//     <Container>
-      // <Header title="The Horned Beasts of Springfield" />
-      // <Main message="Big and strong or small and quick? Elegant and graceful or brash and brave?" beastBios={beastBios}/>
-      // <Footer text="There are no wrong answers!" />
-//     </Container>
-//   );
-// }
-
 class App extends Component {
   constructor(props) {
     super(props);
