@@ -5,7 +5,7 @@ import Container from 'react-bootstrap/Container';
 class Header extends Component {
   render() {
     return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="light" variant="light">
       <Container>
       <Navbar.Brand>
       {this.props.title}
