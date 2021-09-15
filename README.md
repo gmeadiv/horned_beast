@@ -1,3 +1,24 @@
+# Class 2 Horned Beasts Lab Time Estimate:
+
+## Feature One: Display Images
+- ETA: 60 min
+- Begin: 12:30pm
+- End: 1:00pm
+- Total: 30 min
+
+## Feature Two: Display Heart and Votes
+- ETA: 60 min
+- Begin: 1:00pm
+- End: 4:00pm
+- Total: 3 hrs
+
+## Feature Three: Boot Strap
+- ETA: 60 min
+- Begin: happened along with previous features
+- End: will probably be working on it through tonight intermittently 
+- Total: x
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
