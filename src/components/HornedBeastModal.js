@@ -9,13 +9,10 @@ class HornedBeastModal extends Component {
 
     return (
       <Modal show={this.props.show} hide={this.props.hide}>
-        <Modal.Header closeButton>
-          <Modal.Title>{this.props.title}</Modal.Title>
-          {/* we need to pass a title */}
+        <Modal.Header>
         </Modal.Header>
         <Modal.Body>
           <SelectedBeast bio={this.props.selectedBeast}/>
-          {/* we need to pass thru info on the current beast AND include description */}
         </Modal.Body>
         <Modal.Footer>
           <Button variant="secondary" onClick={this.props.hide}>
@@ -28,19 +25,12 @@ class HornedBeastModal extends Component {
 }
 
 class SelectedBeast extends Component {
-  // constructor(props) {
-  //   super(props);
-  //   this.state = {
-      
-  //   }
-  // }
-
   render() {
     return (
       <>
         <h2>{this.props.bio.title}</h2>
-        <Image onClick={this.handleClick} src={this.props.bio.image_url} alt='the selected beast' />
-        {/* finish building this out */}
+        <Image onClick={this.handleClick} src={this.props.bio.image_url} alt='the selected beast' rounded fluid/>
+        <p>{this.props.bio.description}</p>
       </>
     );
   }
