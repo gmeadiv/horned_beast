@@ -61,7 +61,7 @@ class HornedBeastImg extends Component {
     this.props.showBeast();
   }
 
-  render() {
+  render() { 
     return (
       <>
         <Image onClick={() => this.handleClick(this.props.bio)} src={this.props.bio.image_url} alt='an horned beast' rounded fluid />
