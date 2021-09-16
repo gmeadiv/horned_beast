@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './components/Header.js';
 import Main from './components/Main.js';
 import Footer from './components/Footer.js';
+import labFour from './labFourDemo.js';
 import beastBios from './data.json'
 import Container from 'react-bootstrap/Container';
 import HornedBeastModal from './components/HornedBeastModal';
@@ -30,9 +31,10 @@ class App extends Component {
     return (
       <Container>
         <Header title="The Horned Beasts of Springfield" />
-         <Main message="Big and strong or small and quick? Elegant and graceful or brash and brave?" beastBios={beastBios} showBeast={this.showSelectedBeast} changeBeast={this.changeBeast} />
-         <HornedBeastModal selectedBeast={this.state.selectedBeast} show={this.state.selected} hide={this.hideSelectedBeast} beastBios={beastBios} image_url={this.props.image_url} title={this.props.title} description={this.props.description} />
-         <Footer text="There are no wrong answers!" />
+        <Main message="Big and strong or small and quick? Elegant and graceful or brash and brave?" beastBios={beastBios} showBeast={this.showSelectedBeast} changeBeast={this.changeBeast} />
+        <Footer text="There are no wrong answers!" />
+        <HornedBeastModal selectedBeast={this.state.selectedBeast} show={this.state.selected} hide={this.hideSelectedBeast} beastBios={beastBios} image_url={this.props.image_url} title={this.props.title} description={this.props.description} />
+        <labFour />
       </Container>
     );
   }
