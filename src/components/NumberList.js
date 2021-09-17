@@ -6,9 +6,9 @@ class NumberList extends Component {
   render() {
     return (
       <ListGroup>
-        {this.props.horns.map((horn) => (
+        {/* {this.props.horn.map((horn) => (
           <ListGroup.Item key={horn}>{horn}</ListGroup.Item>
-        ))}
+        ))} */}
       </ListGroup>
     )
   }
