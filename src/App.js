@@ -12,7 +12,7 @@ class App extends Component {
     super(props);
     this.state = {
       selected: false,
-      selectedBeast: beastBios[0],
+      selectedBeast: {},
     }
   }
 
@@ -22,7 +22,8 @@ class App extends Component {
   hideSelectedBeast = () => {
     this.setState({selected: false});
   }
-  changeBeast = (newBeast) => {
+  changeBeast = (newBeastName) => {
+    const newBeast = beastBios.find(beast => beast.title === newBeastName);
     this.setState({selectedBeast: newBeast})
   }
 
@@ -30,9 +31,9 @@ class App extends Component {
     return (
       <Container>
         <Header title="The Horned Beasts of Springfield" />
-         <Main message="Big and strong or small and quick? Elegant and graceful or brash and brave?" beastBios={beastBios} showBeast={this.showSelectedBeast} changeBeast={this.changeBeast} />
-         <HornedBeastModal selectedBeast={this.state.selectedBeast} show={this.state.selected} hide={this.hideSelectedBeast} beastBios={beastBios} image_url={this.props.image_url} title={this.props.title} description={this.props.description} />
-         <Footer text="There are no wrong answers!" />
+        <Main message="Big and strong or small and quick? Elegant and graceful or brash and brave?" beastBios={beastBios} showBeast={this.showSelectedBeast} changeBeast={this.changeBeast} />
+        <Footer text="There are no wrong answers!" />
+        <HornedBeastModal selectedBeast={this.state.selectedBeast} show={this.state.selected} hide={this.hideSelectedBeast} beastBios={beastBios} image_url={this.props.image_url} title={this.props.title} description={this.props.description} />
       </Container>
     );
   }

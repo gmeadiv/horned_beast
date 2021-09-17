@@ -5,7 +5,6 @@ import Button from 'react-bootstrap/Button';
 
 class HornedBeastModal extends Component {
   render() {
-    const bios = this.props.beastBios;
 
     return (
       <Modal show={this.props.show} hide={this.props.hide}>
@@ -31,6 +30,7 @@ class SelectedBeast extends Component {
         <h2>{this.props.bio.title}</h2>
         <Image onClick={this.handleClick} src={this.props.bio.image_url} alt='the selected beast' rounded fluid/>
         <p>{this.props.bio.description}</p>
+        <p>{'Horns: ' + this.props.bio.horns}</p>
       </>
     );
   }
