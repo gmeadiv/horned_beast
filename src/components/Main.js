@@ -15,21 +15,23 @@ class Main extends Component {
   }
 
   hornSelector = (choice) => {
-    const bios = this.state.horns;
+    const bios = this.props.beastBios;
+
+    this.setState({
+      horns: this.props.beastBios,
+    })
+
     if (choice) {
       let filteredHorns = bios.filter(beast => beast.horns === +choice);
       this.setState({
         horns: filteredHorns,
-      })
-    } else {
-      this.setState({
-        horns: this.props.beastBios,
       })
     }
   }
 
   render() {
     const bios = this.state.horns;
+    console.log(bios, '<---- BIOS LOG TWO ---<<<')
     return (
       <Container fluid>
         <h2>{this.props.message}</h2>

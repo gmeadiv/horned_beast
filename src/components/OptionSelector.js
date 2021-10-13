@@ -4,6 +4,7 @@ import Form from 'react-bootstrap/Form';
 
 class OptionSelector extends Component {
   handleChange = (event) => {
+    event.preventDefault();
     const selection = event.target.value;
     this.props.onSelect(selection);
   }
